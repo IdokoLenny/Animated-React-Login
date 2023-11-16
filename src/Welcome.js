@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 
 const dropdown = {
   expanded: {
-    width: "233%",
-    height: "1050px",
-    borderRadius: "20%",
-    transform: "rotate(60deg)",
+    height: "110%",
+    borderRadius: "0",
+    borderTopLeftRadius: "0",
+    borderTopRightRadius: "0",
   },
   collapsed: {
-    width: "160%",
-    height: "550px",
+    height: "45%",
     borderRadius: "50%",
-    transform: "rotate(60deg)",
+    borderTopLeftRadius: "0",
+    borderTopRightRadius: "0",
   },
 };
 const expandingTransition = {
   type: "spring",
-  duration: 2.3,
+  duration: 2.25,
   stiffness: 30,
 };
 
@@ -32,7 +32,7 @@ export default function Welcome() {
     }, expandingTransition.duration * 1000 - 1500);
     setTimeout(() => {
       setActive((prevState) => !prevState);
-    }, 400);
+    }, 500);
   }
 
   return (
